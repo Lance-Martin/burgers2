@@ -18,20 +18,22 @@ router.get('/burgers', function(req,res) {
 		console.log(data);
 		res.render('index', hbsObject);
 	});
-	// burger.selectAll(function(data){
-	// 	var hbsObject = {burger : data};
-	// 	console.log(hbsObject);
-	// 	res.render('index', hbsObject);
-	// });
 });
 
-// router.post('/burgers/create', function(req,res) {
-//   console.log('post requested');
-//   console.log(req.body);
-// 	burger.insertOne(req.body.name, false, function(data){
-// 		res.redirect('/burgers');
-// 	});
-// });
+router.post('/burgers/create', function(req,res) {
+  console.log('post requested');
+  console.log(req.body);
+	models.burger.create({
+        name: req.body.name,
+        devoured: false,
+    }).then(function(){
+			res.redirect('/burgers');
+		});
+
+	// burger.insertOne(req.body.name, false, function(data){
+	// 	res.redirect('/burgers');
+	// });
+});
 //
 // router.put('/burgers/update/:id', function(req,res) {
 //
