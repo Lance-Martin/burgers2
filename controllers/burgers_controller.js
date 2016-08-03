@@ -29,17 +29,22 @@ router.post('/burgers/create', function(req,res) {
     }).then(function(){
 			res.redirect('/burgers');
 		});
-
-	// burger.insertOne(req.body.name, false, function(data){
-	// 	res.redirect('/burgers');
-	// });
 });
-//
-// router.put('/burgers/update/:id', function(req,res) {
-//
-//  	burger.updateOne(req.params.id, req.body.eat, function(data){
-//  		res.redirect('/burgers');
-//    	});
-// });
+
+router.put('/burgers/update/:id', function(req,res) {
+	models.burger.findOne({ where: {id: req.params.id} }).then(function(burger) {
+  if (burger) { // if the record exists in the db
+    burger.updateAttributes({
+      devoured: true
+    }).then(function() {
+			res.redirect('/burgers');
+		});
+  }
+	});
+
+ // 	burger.updateOne(req.params.id, req.body.eat, function(data){
+ // 		res.redirect('/burgers');
+  //  	});
+});
 
 module.exports = router;
