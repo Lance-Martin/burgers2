@@ -1,0 +1,29 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Dependencies for burger devour app",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "mysql": "^2.11.1",
+    "sequelize": "^3.23.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lance-Martin/burger.git"
+  },
+  "author": "Lance Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lance-Martin/burger/issues"
+  },
+  "homepage": "https://github.com/Lance-Martin/burger#readme"
+}
