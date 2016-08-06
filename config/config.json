@@ -19,6 +19,6 @@
     "database": "zmlbbbs89tuaovsu",
     "host": "gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "use_env_variable": "zmlbbbs89tuaovsu"
+    "use_env_variable": "mysql://soatp6uyyku0qrp4:yox8wapmx40ev7i4@gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/zmlbbbs89tuaovsu"
   }
 }
